@@ -25,7 +25,7 @@ public class AlbumsController {
         return "albums";
     }
 
-    @GetMapping("/setup")
+    /*@GetMapping("/setup")
     public String setup(Map<String, Object> model) {
         for (Album album : albumFixtures.load()) {
             albumsBean.addAlbum(album);
@@ -34,5 +34,5 @@ public class AlbumsController {
         model.put("albums", albumsBean.getAlbums());
 
         return "setup";
-    }
+    }*/
 }
