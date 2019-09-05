@@ -40,4 +40,9 @@ public class AlbumsBean {
         cq.select(cq.from(Album.class));
         return entityManager.createQuery(cq).getResultList();
     }
+
+    @Transactional
+    public void addMovie(Album album) {
+        entityManager.persist(album);
+    }
 }
