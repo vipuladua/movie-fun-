@@ -10,6 +10,9 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
@@ -19,8 +22,7 @@ import javax.sql.DataSource;
 })
 public class Application {
 
-
-    //@Autowired
+   //@Autowired
    // private Environment env;
 
     public static void main(String[] args) {
@@ -36,5 +38,7 @@ public class Application {
         //String envUrl =env.getProperty("VCAP_SERVICE");
         return new DatabaseServiceCredentials(vcapServices);
     }
+
+
 
 }

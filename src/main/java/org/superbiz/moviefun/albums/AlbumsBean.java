@@ -32,7 +32,7 @@ public class AlbumsBean {
     @PersistenceContext(unitName = "albums")
     private EntityManager entityManager;
 
-    @Transactional
+
     public void addAlbum(Album album) {
         entityManager.persist(album);
     }
@@ -43,7 +43,7 @@ public class AlbumsBean {
         return entityManager.createQuery(cq).getResultList();
     }
 
-    @Transactional
+
     public void addMovie(Album album) {
         entityManager.persist(album);
     }
