@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class CsvUtils {
 
     public static String readFile(String path) {
-       // ClassLoader cl = System.class.getClassLoader();
+       //ClassLoader cl = System.class.getClassLoader();
         ClassLoader cl = CsvUtils.class.getClassLoader();
         InputStream ip = cl.getResourceAsStream(path);
         Scanner scanner = new Scanner(ip).useDelimiter("\\A");
