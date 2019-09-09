@@ -72,7 +72,7 @@ public class AlbumsController {
         Blob coverBlob = maybeCoverBlob.orElseGet(this::buildDefaultCoverBlob);
 
         byte[] imageBytes = IOUtils.toByteArray(coverBlob.inputStream);
-
+        logger.debug("Uploading cover for album with id in getcover {}", albumId);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.parseMediaType(coverBlob.contentType));
         headers.setContentLength(imageBytes.length);
